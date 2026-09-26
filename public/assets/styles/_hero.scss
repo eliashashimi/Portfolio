@@ -1,6 +1,11 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
 .hero-wrapper-desktop {
   width: 100%;
-  height: 80dvh;
+  height: 89dvh;
   max-width: 1440px;
   display: flex;
   align-items: center;
@@ -9,27 +14,50 @@
     color: white;
   }
   .hero-img {
-    width: 700px;
-    height: 700px;
+    width: 600px;
+    height: 600px;
   }
   .hero-right-container {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-right: 110px;
 
     .hero-upper-right {
       width: 100%;
       display: flex;
       justify-content: end;
       align-items: end;
-      gap: 300px;
+      gap: 220px;
       margin-bottom: 36px;
+      h5 {
+        font-family: 'Anta';
+      }
+      p {
+        color: #89bcd9;
+        font-family: 'Josefin Sans';
+        font-style: normal;
+        font-weight: 300;
+      }
+      .hero-logo:hover {
+        transform: translateY(-2px) scale(1.09);
+        transition: all 0.3s ease-in-out;
+      }
     }
     .social-btn {
       display: flex;
       flex-direction: column;
       gap: 16px;
+      .email:hover {
+        background: url(../icons/Email\ button-hover.svg);
+      }
+      .github:hover {
+        background: url(../icons/Vector-hover.svg);
+      }
+      .linkedin:hover {
+        background: url(../icons/Linkedin\ button-hover.svg);
+      }
     }
     .btn {
       background-color: #262e34;
@@ -42,13 +70,28 @@
     margin-bottom: 140px;
     h1 {
       font-size: 88px;
+      font-family: 'Anta';
+      font-style: normal;
+      font-weight: 400;
     }
     h2 {
       font-size: 40px;
+      font-family: 'Josefin Sans';
+      font-style: normal;
+      font-weight: 400;
     }
   }
   .hero-arrow-down {
     background-color: #262e34;
     border-style: none;
+    :hover {
+      background: #f8f5ec1f;
+      border-radius: 20px;
+      transition: all 0.3s ease-in-out;
+    }
   }
 }
+
+// .d-none {
+//   display: none;
+// }
