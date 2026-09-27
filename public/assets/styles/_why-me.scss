@@ -1,9 +1,9 @@
 main {
   width: 100%;
-  max-width: 1440px;
 }
 .why-me {
   width: 100%;
+  max-width: 1440px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,7 +56,7 @@ main {
       justify-content: center;
       align-items: center;
     }
-    &__blue-text {
+    &--blue-text {
       color: #89bcd9;
     }
     &--right {
@@ -85,6 +85,11 @@ main {
       height: 48px;
       background: #262e34;
       border-style: none;
+      &:hover {
+        background: #f8f5ec1f;
+        border-radius: 25px;
+        transition: all 0.3s ease-in-out;
+      }
     }
   }
 }
