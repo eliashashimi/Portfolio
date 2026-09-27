@@ -1,19 +1,23 @@
-.header-wrapper {
+.header-desktop {
   background-color: #89bcd9;
   width: 100%;
   height: 104px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0px 110px;
   position: sticky;
+  flex: 1;
+  top: 0;
+  left: 0;
 }
 
 header {
   width: 100%;
+  max-width: 1440px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0px 110px;
 }
 
 figure {
@@ -22,6 +26,22 @@ figure {
   justify-content: center;
   align-items: center;
   text-align: center;
+  :hover {
+    cursor: pointer;
+  }
+  h5 {
+    font-size: 14px;
+    color: white;
+    font-family: 'Anta';
+    font-style: normal;
+    font-weight: 400;
+  }
+  p {
+    font-size: 14px;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 300;
+  }
 }
 
 table {
@@ -30,17 +50,34 @@ table {
   justify-content: space-between;
   tr {
     width: 100%;
+    color: #262e34;
     font-size: 26px;
     display: flex;
     justify-content: space-between;
+    font-family: 'Josefin Sans';
+    font-style: medium;
+    font-weight: 500;
+    :hover {
+      color: #f8f5ec;
+      cursor: pointer;
+      transition: all 0.1s ease-in-out;
+    }
   }
 }
 .btn-header {
   display: flex;
   gap: 14px;
+  :hover {
+    cursor: pointer;
+  }
   .btn-lang {
     font-size: 18px;
+    color: #262e34;
     background-color: #89bcd9;
     border-style: none;
+    :hover {
+      color: #f8f5ec;
+      transition: all 0.4s ease-in-out;
+    }
   }
 }
