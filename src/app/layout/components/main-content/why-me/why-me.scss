@@ -1,0 +1,99 @@
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.why-me {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__content {
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+    h2 {
+      font-size: 60px;
+      font-family: 'Anta';
+      font-style: normal;
+      font-weight: 400;
+      text-align: center;
+      color: #89bcd9;
+      margin-bottom: 80px;
+    }
+  }
+  &__box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    &--left {
+      width: 50%;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        font-size: 30px;
+        color: white;
+        font-family: 'Josefin Sans';
+        font-style: normal;
+        font-weight: 700;
+      }
+    }
+    &--location {
+      width: 75px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &--icon {
+      width: 74px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &--blue-text {
+      color: #89bcd9;
+    }
+    &--right {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
+      gap: 24px;
+      &--table {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: end;
+        td {
+          font-size: 18px;
+          color: white;
+          font-family: 'Josefin Sans';
+          font-style: normal;
+          font-weight: 400;
+        }
+      }
+    }
+    &--lets-talk {
+      height: 48px;
+      background: #262e34;
+      border-style: none;
+      &:hover {
+        background: #f8f5ec1f;
+        border-radius: 25px;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+}
