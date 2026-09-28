@@ -2,8 +2,11 @@ export interface Project {
   name: string;
   duration: string;
   about: string;
-  organize: string;
+  aboutText: string;
+  organise: string;
+  organiseText: string;
   experience: string;
+  experienceText: string;
   technologies: string[];
   image: string;
   urlTest?: string;

@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { Header } from '../../../shared/header/header';
 
 import { MySkills } from './my-skills/my-skills';
