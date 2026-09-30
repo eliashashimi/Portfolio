@@ -15,11 +15,9 @@
 
 header {
   width: 100%;
-  max-width: 1440px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 110px;
 }
 
 figure {
@@ -47,12 +45,11 @@ figure {
 }
 
 .header-table {
-  width: 50%;
+  width: 60%;
   display: flex;
   justify-content: space-between;
   tr {
     width: 100%;
-    color: #262e34;
     font-size: 26px;
     display: flex;
     justify-content: space-between;
@@ -63,6 +60,10 @@ figure {
       color: #f8f5ec;
       cursor: pointer;
       transition: all 0.1s ease-in-out;
+    }
+    a {
+      text-decoration: none;
+      color: #262e34;
     }
   }
 }
