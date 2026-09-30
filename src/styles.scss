@@ -30,8 +30,6 @@ h2 {
   color: #89bcd9;
   margin-bottom: 80px;
 }
-p {
-}
 
 .highlight {
   color: #89bcd9;
@@ -39,11 +37,21 @@ p {
 
 span,
 p,
+li,
 a,
-button {
+h4,
+button,
+[ngTab] {
   font-family: 'Josefin Sans';
   font-style: normal;
   line-height: 120%;
+}
+span,
+p,
+li,
+a,
+button,
+[ngTab] {
   color: white;
 }
 

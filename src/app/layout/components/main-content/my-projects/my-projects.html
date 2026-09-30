@@ -1,50 +1,110 @@
-<section id="my-projects" class="my-projects">
-  <div class="my-projects__content">
-    <h2>My Projects</h2>
-    <div>
-      <button id="tab-daBubble" class="tab-btn active" (click)="('')">1.Da Bubble</button>
-      <button id="tab-elPolloLoco" class="tab-btn" (click)="('')">2.El Pollo Loco</button>
-      <button id="tab-join" class="tab-btn" (click)="('')">3.Join</button>
-      <button id="tab-ongoingProject" class="tab-btn" (click)="('')">4.Ongoing Project</button>
-      <div class="my-projects__content__box">
-        @for (item of list; track item.name; let index = $index) {
-          <div class="my-projects__content__box--left">
-            <div>{{ item.name }}</div>
-            <table class="my-projects__content__table">
-              <tr role="link">
-                <th>{{ item.about }}</th>
-                <td>{{ item.aboutText }}</td>
-              </tr>
-              <tr>
-                <th>{{ item.organise }}</th>
-                <td>{{ item.organiseText }}</td>
-              </tr>
-              <tr>
-                <th>{{ item.experience }}</th>
-                <td>{{ item.experienceText }}</td>
-              </tr>
-            </table>
+<section id="my-projects" class="content-wrapper" ngTabs>
+  <h2>My Projects</h2>
+  <div ngTabList selectionMode="follow" selectedTab="el-pollo-loco">
+    <div ngTab value="el-pollo-loco">El Pollo Loco</div>
+    <div ngTab value="next">Join</div>
+  </div>
+  <div class="sliding-window">
+    <div ngTabPanel [preserveContent]="true" value="el-pollo-loco">
+      <ng-template ngTabContent>
+        <div class="box__left">
+          <ul>
+            <div class="box__left--firstLine">
+              <li>
+                About the project &nbsp; <span class="duration">Duration: 5 weeks</span>
+                <br />
+                <p>
+                  A simple Jump-and-Run game based on an object-oriented approach. Help pepe to find
+                  coins and salsa bottles to fight against the enboss chicken.
+                </p>
+              </li>
+            </div>
+            <li>
+              How I have organised my work process <br />
+              <p>
+                How do you keep your code clean and maintainable? Have you broken the project down
+                into reusable modules or components? Focus on documentation, naming files,
+                variables, classes and testing.
+              </p>
+            </li>
+            <li>
+              What I have learned
+              <p>
+                As someone who is always trying to learn new technologies, you may have enjoyed
+                working on this project because it allowed you to delve deep into a particular
+                technology. Give details, such as the name of the framework or language you mean.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="box__right">
+          <p>Technologies</p>
+          <div class="techIcons">
+            <img src="assets/images/Angular_Projects.png" alt="" />
+            <img src="assets/images/TS_Projects.png" alt="" />
+            <img src="assets/images/FireBase_Projects.png" alt="" />
           </div>
-          <div class="my-projects__content__box--right">
-            <h4>Technologies</h4>
-
-            <div>
-              {{ item.technologies }}
-            </div>
-            <div class="my-projects__content__box--right--imgBox">
-              {{ item.image }}
-            </div>
-            <div>
-              <a href=""
-                ><button>{{ item.urlTest }}</button></a
-              >
-              <a href="https://github.com/eliashashimi/EL-POLLO-LOCO"
-                ><button>{{ item.urlGit }}</button></a
-              >
-            </div>
+          <div class="box__right--imgBox">
+            <img src="assets/images/el_pollo_loco.png" alt="" />
           </div>
-        }
-      </div>
+          <div class="box__right--btn">
+            <a href=""><button class="btn-primary">Live Test</button></a>
+            <a href="https://github.com/eliashashimi/EL-POLLO-LOCO"
+              ><button class="btn-secondary">Github</button></a
+            >
+          </div>
+        </div>
+      </ng-template>
+    </div>
+    <div ngTabPanel [preserveContent]="true" value="join">
+      <ng-template ngTabContent>
+        <div class="box__left">
+          <ul>
+            <div class="box__left--firstLine">
+              <li>
+                About the project &nbsp; <span class="duration">Duration: 2 months</span> <br />
+                <p>
+                  Task manager inspired by the Kanban System. Create and organize tasks using drag
+                  and drop functions, assign users and categories.
+                </p>
+              </li>
+            </div>
+            <li>
+              How I have organised my work process <br />
+              <p>
+                How do you keep your code clean and maintainable? Have you broken the project down
+                into reusable modules or components? Focus on documentation, naming files,
+                variables, classes and testing.
+              </p>
+            </li>
+            <li>
+              My group work experience <br />
+              <p>
+                How many people were in the team and what was your role? Describe your tasks in 1-2
+                sentences, for example: login form, dashboard or chat functionality. What
+                technologies did you use? It is nice to mention good teamwork and cooperation.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="box__right">
+          <p>Technologies</p>
+          <div class="techIcons">
+            <img src="assets/images/Html_Projects.png" alt="" />
+            <img src="assets/images/JS_Projects.png" alt="" />
+            <img src="assets/images/CSS_Projects.png" alt="" />
+          </div>
+          <div class="box__right--imgBox">
+            <img src="assets/images/comming-soon.png" alt="" />
+          </div>
+          <div class="box__right--btn">
+            <a href=""><button class="btn-primary">Live Test</button></a>
+            <a href="https://github.com/eliashashimi/EL-POLLO-LOCO"
+              ><button class="btn-secondary">Github</button></a
+            >
+          </div>
+        </div>
+      </ng-template>
     </div>
   </div>
 </section>
