@@ -1,0 +1,5 @@
+@use '../../public/assets/styles';
+
+:host {
+  @include styles.flex-center(column);
+}
