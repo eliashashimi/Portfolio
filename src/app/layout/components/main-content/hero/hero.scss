@@ -1,36 +1,24 @@
 .hero-wrapper-desktop {
   width: 100%;
-  height: 100dvh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  padding-top: 60px;
-  .hero {
-    &__content {
-      width: 100%;
-      max-width: 1440px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  height: 90dvh;
+  .content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 100px 0px 0px;
   }
   .hero-text {
     color: white;
   }
   .hero-img {
-    width: 700px;
-    height: 700px;
-    margin-left: 100px;
+    width: 800px;
+    height: 800px;
   }
   .hero-right-container {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-right: 80px;
-
     .hero-upper-right {
       width: 100%;
       display: flex;
