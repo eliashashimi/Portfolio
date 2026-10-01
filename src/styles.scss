@@ -40,12 +40,14 @@ p,
 li,
 a,
 h4,
+h5,
 button,
 [ngTab] {
   font-family: 'Josefin Sans';
   font-style: normal;
   line-height: 120%;
 }
+
 span,
 p,
 li,
@@ -80,6 +82,37 @@ button {
 
   background: #262e34;
   :hover {
+    background: #f8f5ec1f;
+  }
+  :disabled {
+    background: #262e34;
+    color: #f8f5ec;
+  }
+}
+.btn-arrow {
+  width: 38px;
+  height: 89px;
+  color: #89bcd9;
+  border: 1px solid #89bcd9;
+  background: #262e34;
+  padding: 20px 8px;
+}
+.btn-arrow:hover {
+  background: #f8f5ec1f;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.inpContact {
+  width: 450px;
+  height: 60px;
+  border: 1px solid #89bcd9;
+  border-radius: 30px;
+  background: #262e34;
+  :hover {
+    cursor: pointer;
+  }
+  :active {
     background: #f8f5ec1f;
   }
 }
