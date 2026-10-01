@@ -1,14 +1,14 @@
 @use '../../../../../../public/assets/styles';
 
-:host {
+.why-me {
   @include styles.flex-center(column);
-  width: 100%;
-  max-width: 1440px;
-  padding: 52px 290px;
+  padding: 100px 0px 120px;
 }
 .content {
   @include styles.flex-center;
+  align-items: flex-start;
   gap: 52px;
+  padding: 0px 120px;
   margin-bottom: 24px;
 
   .location {
@@ -20,7 +20,9 @@
       white-space: nowrap;
     }
   }
-}
-button {
-  align-self: flex-end;
+  .talk-btn {
+    justify-self: flex-end;
+    align-self: flex-end;
+    margin-top: 24px;
+  }
 }
