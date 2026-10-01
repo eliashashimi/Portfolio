@@ -3,6 +3,7 @@
 .content-wrapper {
   @include styles.flex-center;
   margin-top: 80px;
+  margin-bottom: 80px;
   padding-right: 120px;
 }
 
@@ -13,13 +14,14 @@
 
 .contact {
   @include styles.flex-center(column);
-  padding: 0px 8% 0px 15%;
+  padding: 0px 9% 0px 14%;
   gap: 16px;
   &__first-line {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     margin-bottom: 26px;
+    margin-left: 2px;
     p {
       width: 50%;
     }
