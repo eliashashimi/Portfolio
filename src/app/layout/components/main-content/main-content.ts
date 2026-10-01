@@ -7,9 +7,10 @@ import { WhyMe } from './why-me/why-me';
 import { Hero } from './hero/hero';
 import { References } from './references/references';
 import { Contact } from './contact/contact';
+import { Footer } from '../../../shared/footer/footer';
 
 @Component({
-  imports: [Header, Hero, WhyMe, MySkills, MyProjects, References, Contact],
+  imports: [Header, Hero, WhyMe, MySkills, MyProjects, References, Contact, Footer],
   selector: 'app-main-content',
   styleUrl: './main-content.scss',
   templateUrl: './main-content.html',
