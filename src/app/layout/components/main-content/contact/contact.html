@@ -16,32 +16,49 @@
         >
       </div>
     </div>
-    <div class="input">
-      <div class="input__content">
-        <div class="input__content--first">
-          <h5>Your Name</h5>
-          <input class="inpContact" type="text" />
+    <form [formGroup]="userform" (ngSubmit)="formSubmit()">
+      <div class="input">
+        <div class="input__content">
+          <div class="input__content--first">
+            <h5 label for="name">Your Name</h5>
+            <input class="inpContact" id="name" type="text" formControlName="firstname" />
+          </div>
+          <div class="input__content--second">
+            <h5>Your Email</h5>
+            <input class="inpContact" id="email" type="text" formControlEmail="email" />
+          </div>
         </div>
-        <div class="input__content--second">
-          <h5>Your Email</h5>
-          <input class="inpContact" type="text" />
+        <div class="input__content--third">
+          <h5>Your Message</h5>
+          <input id="message" type="text" formControlMessage="message" />
         </div>
+        <div class="accept">
+          <button class="accept--btn">
+            <img src="assets/icons/Check box.svg" alt="" />
+          </button>
+          <p>
+            i´ve read the <span class="pri-pol">private policy</span> and agree to the processing of
+            my data as outlined.
+          </p>
+        </div>
+        <button class="send-btn" type="submit">Send</button>
       </div>
-      <div class="input__content--third">
-        <h5>Your Message</h5>
-        <input type="text" />
-      </div>
-      <div class="accept">
-        <button class="accept--btn">
-          <img src="assets/icons/Check box.svg" alt="" />
-        </button>
-        <p>
-          i´ve read the <span class="pri-pol">private policy</span> and agree to the processing of
-          my data as outlined.
-        </p>
-      </div>
-      <button>Send</button>
-    </div>
+    </form>
   </div>
-  <button class="btn-arrow"><img src="assets/icons/btn_arrow_up.svg" alt="" /></button>
+  <a href="#hero"
+    ><button class="btn-arrow"><img src="assets/icons/btn_arrow_up.svg" alt="" /></button
+  ></a>
 </section>
+
+<p>{{ firstname?.valid }}</p>
+<p>{{ email?.valid }}</p>
+<p>{{ message?.valid }}</p>
+
+<!-- <p>{{ userform.valid }}</p> -->
+<!-- <h3>{{ firstname.touched }}</h3>
+<h3>{{ firstname.dirty }}</h3>
+<br />
+<h3>{{ email.touched }}</h3>
+<h3>{{ email.dirty }}</h3> -->
+<!-- <h3>{{ firstname.valid }}</h3>
+<h3>{{ firstname.value }}</h3> -->
