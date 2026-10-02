@@ -9,7 +9,9 @@
   position: relative;
 }
 
+html,
 body {
+  scroll-behavior: smooth;
   background-color: #262e34;
   width: 100%;
 }
