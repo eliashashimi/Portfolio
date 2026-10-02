@@ -1,8 +1,8 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
 
 @Component({
+  imports: [],
   selector: 'app-hero',
   styleUrl: './hero.scss',
   templateUrl: './hero.html',
