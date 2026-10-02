@@ -2,7 +2,7 @@
 
 .why-me {
   @include styles.flex-center(column);
-  padding: 100px 0px 120px;
+  padding: 100px 0px;
 }
 .content {
   @include styles.flex-center;
