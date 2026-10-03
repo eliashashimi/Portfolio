@@ -1,6 +1,6 @@
 <section class="skills">
   <div class="content-wrapper">
-    <h2>My Skills</h2>
+    <h2>{{ 'mySkills.mySkills' | translate }}</h2>
     <div class="my-skills__box">
       <div class="my-skills__box--left">
         <img
@@ -39,14 +39,13 @@
         <img class="my-skills__box--icon" src="assets/icons/Scrum.svg" alt="Scrum Icon and text" />
       </div>
       <div class="my-skills__box--right">
-        <p>I am currently learning</p>
-        <div>
+        <p>{{ 'mySkills.learning' | translate }}</p>
+        <div class="my-skills__box--right--inside">
           <img src="assets/icons/React.svg" alt="React Icon and text" />
           <img src="assets/icons/Vue.svg" alt="Vue.js Icon and text" />
         </div>
         <p>
-          Show that you are motivated to continually improve your skills, implement innovative
-          solutions and stay abreast of new technologies.
+          {{ 'mySkills.text' | translate }}
         </p>
       </div>
     </div>
