@@ -1,11 +1,9 @@
 <section class="content-wrapper">
   <div class="contact">
-    <h2>Contact me</h2>
+    <h2>{{ 'contact.head' | translate }}</h2>
     <div class="contact__first-line">
       <p>
-        Encourage people to contact you and describe what role you are interested in. Show that you
-        will add value to their projects through your work. Example: Feel free to get in touch with
-        job offers or opportunities such as: ...
+        {{ 'contact.text' | translate }}
       </p>
       <div class="contact__first-line--telMail">
         <a href="mailto:elias.h.989@hotmail.com"
@@ -20,16 +18,16 @@
       <div class="input">
         <div class="input__content">
           <div class="input__content--first">
-            <h5 label for="name">Your Name</h5>
+            <h5 label for="name">{{ 'contact.yourName' | translate }}</h5>
             <input class="inpContact" id="name" type="text" formControlName="firstname" />
           </div>
           <div class="input__content--second">
-            <h5>Your Email</h5>
+            <h5>{{ 'contact.yourEmail' | translate }}</h5>
             <input class="inpContact" id="email" type="text" formControlEmail="email" />
           </div>
         </div>
         <div class="input__content--third">
-          <h5>Your Message</h5>
+          <h5>{{ 'contact.yourMessage' | translate }}</h5>
           <input id="message" type="text" formControlMessage="message" />
         </div>
         <div class="accept">
@@ -37,11 +35,12 @@
             <img src="assets/icons/Check box.svg" alt="" />
           </button>
           <p>
-            i´ve read the <span class="pri-pol">private policy</span> and agree to the processing of
-            my data as outlined.
+            {{ 'contact.accept' | translate }}
+            <span class="pri-pol">{{ 'contact.policy' | translate }}</span>
+            {{ 'contact.acceptAgree' | translate }}
           </p>
         </div>
-        <button class="send-btn" type="submit">Send</button>
+        <button class="send-btn" type="submit">{{ 'contact.send' | translate }}</button>
       </div>
     </form>
   </div>

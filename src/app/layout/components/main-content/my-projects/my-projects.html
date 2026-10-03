@@ -1,5 +1,5 @@
 <section class="content-wrapper" ngTabs>
-  <h2>My Projects</h2>
+  <h2>{{ 'myProjects.name' | translate }}</h2>
   <div ngTabList selectionMode="follow" selectedTab="el-pollo-loco">
     <div ngTab value="el-pollo-loco">El Pollo Loco</div>
     <div ngTab value="join">Join</div>
@@ -11,34 +11,28 @@
           <ul>
             <div class="box__left--firstLine">
               <li>
-                About the project &nbsp; <span class="duration">Duration: 5 weeks</span>
+                {{ 'myPorjects.aboutHead' | translate }} &nbsp;
+                <span class="duration">{{ 'myProjects.dur' | translate }}</span>
                 <br />
-                <p>
-                  A simple Jump-and-Run game based on an object-oriented approach. Help pepe to find
-                  coins and salsa bottles to fight against the enboss chicken.
-                </p>
+                <p>{{ 'myProjects.aboutText' | translate }}</p>
               </li>
             </div>
             <li>
-              How I have organised my work process <br />
+              {{ 'myPorjects.orgaHead' | translate }} <br />
               <p>
-                How do you keep your code clean and maintainable? Have you broken the project down
-                into reusable modules or components? Focus on documentation, naming files,
-                variables, classes and testing.
+                {{ 'myProjects.orgaText' | translate }}
               </p>
             </li>
             <li>
-              What I have learned
+              {{ 'myProjects.learnedHead' | translate }}
               <p>
-                As someone who is always trying to learn new technologies, you may have enjoyed
-                working on this project because it allowed you to delve deep into a particular
-                technology. Give details, such as the name of the framework or language you mean.
+                {{ 'myProjects.learnedText' | translate }}
               </p>
             </li>
           </ul>
         </div>
         <div class="box__right">
-          <p>Technologies</p>
+          <p>{{ 'myProjects.Technologies' | translate }}</p>
           <div class="techIcons">
             <img src="assets/images/Angular_Projects.png" alt="" />
             <img src="assets/images/TS_Projects.png" alt="" />
@@ -62,33 +56,29 @@
           <ul>
             <div class="box__left--firstLine">
               <li>
-                About the project &nbsp; <span class="duration">Duration: 2 months</span> <br />
+                {{ 'myPorjects.aboutHead' | translate }} &nbsp;
+                <span class="duration">{{ 'myProjects.durJoin' | translate }}</span> <br />
                 <p>
-                  Task manager inspired by the Kanban System. Create and organize tasks using drag
-                  and drop functions, assign users and categories.
+                  {{ 'myProjects.aboutText' | translate }}
                 </p>
               </li>
             </div>
             <li>
-              How I have organised my work process <br />
+              {{ 'myPorjects.orgaHead' | translate }} <br />
               <p>
-                How do you keep your code clean and maintainable? Have you broken the project down
-                into reusable modules or components? Focus on documentation, naming files,
-                variables, classes and testing.
+                {{ 'myProjects.orgaText' | translate }}
               </p>
             </li>
             <li>
-              My group work experience <br />
+              {{ 'myProjects.groupExpHead' | translate }}
               <p>
-                How many people were in the team and what was your role? Describe your tasks in 1-2
-                sentences, for example: login form, dashboard or chat functionality. What
-                technologies did you use? It is nice to mention good teamwork and cooperation.
+                {{ 'myProjects.groupExpText' | translate }}
               </p>
             </li>
           </ul>
         </div>
         <div class="box__right">
-          <p>Technologies</p>
+          <p>{{ 'myProjects.Technologies' | translate }}</p>
           <div class="techIcons">
             <img src="assets/images/Html_Projects.png" alt="" />
             <img src="assets/images/JS_Projects.png" alt="" />

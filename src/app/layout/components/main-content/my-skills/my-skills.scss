@@ -18,7 +18,8 @@
     height: 400px;
     gap: 20px;
     &--inside {
-      @include styles.flex-center(column);
+      @include styles.flex-center;
+      gap: 24px;
     }
   }
   p {

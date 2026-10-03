@@ -1,15 +1,15 @@
 <section class="refs-about-me">
-  <h4>Need a teamplayer? Here’s what my colleagues say about me</h4>
+  <h4>{{ 'refs.header' | translate }}</h4>
   <div class="content-wrapper">
     <div class="references">
       @for (item of refs; track item.names; let index = $index) {
         <div class="references__card">
           <p class="name">{{ item.names }}</p>
           <div class="proName">
-            <p>{{ item.project }}</p>
+            <p>{{ item.project | translate }}</p>
             <span class="highlight">: {{ item.proName }} </span>
           </div>
-          <p>{{ item.text }}</p>
+          <p>{{ item.text | translate }}</p>
           <a class="highlight" href=""> {{ item.urlLink }} </a>
         </div>
       }
