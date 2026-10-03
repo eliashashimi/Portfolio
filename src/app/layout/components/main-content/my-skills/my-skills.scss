@@ -1,0 +1,31 @@
+@use '../../../../../../public/assets/styles';
+
+.skills {
+  @include styles.flex-center;
+  width: 100%;
+}
+.my-skills__box {
+  @include styles.flex-center;
+  padding: 0px 120px;
+  &--icon {
+    padding: 20px;
+  }
+  &--right {
+    @include styles.flex-center(column);
+    background: url(../../../../../../public/assets/images/Ellipse\ 25.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    gap: 20px;
+    &--inside {
+      @include styles.flex-center;
+      gap: 24px;
+    }
+  }
+  p {
+    width: 60%;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+  }
+}

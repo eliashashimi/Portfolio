@@ -1,0 +1,19 @@
+<section class="refs-about-me">
+  <h4>{{ 'refs.header' | translate }}</h4>
+  <div class="content-wrapper">
+    <div class="references">
+      @for (item of refs; track item.names; let index = $index) {
+        <div class="references__card">
+          <p class="name">{{ item.names }}</p>
+          <div class="proName">
+            <p>{{ item.project | translate }}</p>
+            <span class="highlight">: {{ item.proName }} </span>
+          </div>
+          <p>{{ item.text | translate }}</p>
+          <a class="highlight" href=""> {{ item.urlLink }} </a>
+        </div>
+      }
+    </div>
+    <div id="contact"></div>
+  </div>
+</section>
