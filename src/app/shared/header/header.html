@@ -1,23 +1,37 @@
 <section class="header-desktop header-wrapper">
-  <header>
-    <figure>
-      <img class="header-logo" src="assets/icons/Logo icon.svg" alt="Logo icon" />
-      <figcaption>
-        <h5>M.E.Hashimi</h5>
-        <p>developer</p>
-      </figcaption>
-    </figure>
-    <table>
-      <tr>
-        <th>Why me</th>
-        <th>Skills</th>
-        <th>Projects</th>
-        <th>Contact</th>
-      </tr>
-    </table>
-    <div class="btn-header">
-      <button class="btn-lang">DE</button>
-      <button class="btn-lang">EN</button>
-    </div>
-  </header>
+  <div class="content-wrapper">
+    <header>
+      <figure>
+        <img class="header-logo" src="assets/icons/Logo icon.svg" alt="Logo icon" />
+        <figcaption>
+          <h5>M.E.Hashimi</h5>
+          <p>{{ 'header.dev' | translate }}</p>
+        </figcaption>
+      </figure>
+      <table class="header-table">
+        <tr>
+          <th>
+            <a href="#why-me">{{ 'header.whyMe' | translate }}</a>
+          </th>
+          <th>
+            <a href="#my-skills">{{ 'header.skills' | translate }}</a>
+          </th>
+          <th>
+            <a href="#my-projects">{{ 'header.projects' | translate }}</a>
+          </th>
+          <th>
+            <a href="#contact">{{ 'header.contact' | translate }}</a>
+          </th>
+        </tr>
+      </table>
+      <div class="btn-header">
+        <button (click)="switchLanguage('de')" class="btn-lang">
+          <p>DE</p>
+        </button>
+        <button (click)="switchLanguage('en')" class="btn-lang">
+          <p>EN</p>
+        </button>
+      </div>
+    </header>
+  </div>
 </section>
