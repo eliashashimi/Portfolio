@@ -18,41 +18,17 @@
       <div class="input">
         <div class="input__content">
           <div class="input__content--first">
-            @if (firstname?.valid) {
-              <h5 label for="name">{{ 'contact.yourName' | translate }}</h5>
-            } @else {
-              <h5 label for="name">{{ 'contact.error' | translate }}</h5>
-            }
-            <input
-              class="inpContact"
-              id="name"
-              type="text"
-              formControlName="firstname"
-              autocomplete="off"
-            />
+            <h5 label for="name">{{ 'contact.yourName' | translate }}</h5>
+            <input class="inpContact" id="name" type="text" formControlName="firstname" />
           </div>
           <div class="input__content--second">
-            @if (email?.valid) {
-              <h5 label for="email">{{ 'contact.yourEmail' | translate }}</h5>
-            } @else {
-              <h5 label for="email">{{ 'contact.error' | translate }}</h5>
-            }
-            <input
-              class="inpContact"
-              id="email"
-              type="text"
-              formControlEmail="email"
-              autocomplete="off"
-            />
+            <h5>{{ 'contact.yourEmail' | translate }}</h5>
+            <input class="inpContact" id="email" type="text" formControlEmail="email" />
           </div>
         </div>
         <div class="input__content--third">
-          @if (message?.valid) {
-            <h5>{{ 'contact.yourMessage' | translate }}</h5>
-          } @else {
-            <h5>{{ 'contact.error' | translate }}</h5>
-          }
-          <input id="message" type="text" formControlMessage="message" autocomplete="off" />
+          <h5>{{ 'contact.yourMessage' | translate }}</h5>
+          <input id="message" type="text" formControlMessage="message" />
         </div>
         <div class="accept">
           <button class="accept--btn">

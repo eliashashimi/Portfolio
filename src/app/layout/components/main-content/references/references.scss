@@ -1,0 +1,34 @@
+@use '../../../../../../public/assets/styles';
+
+.refs-about-me {
+  @include styles.flex-center(column);
+  gap: 52px;
+  margin-top: 80px;
+}
+
+.references {
+  @include styles.flex-center;
+  gap: 13px;
+  height: 400px;
+  &__card {
+    @include styles.flex-center(column);
+    background: url(../../../../../../public/assets/images/Ellipse\ 02.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 400px;
+    height: 100%;
+    padding: 0px 20px;
+  }
+}
+.proName {
+  @include styles.flex-center;
+}
+h4 {
+  color: #89bcd9;
+  font-size: 32px;
+}
+.name {
+  font-size: 26px;
+  font-weight: 600;
+}

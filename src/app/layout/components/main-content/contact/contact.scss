@@ -39,7 +39,7 @@ a {
 .input {
   @include styles.flex-center(column);
   gap: 20px;
-  &:invalid &__content {
+  &__content {
     @include styles.flex-center;
     gap: 20px;
     &--third {

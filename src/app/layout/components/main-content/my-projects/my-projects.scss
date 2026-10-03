@@ -1,0 +1,125 @@
+@use '../../../../../../public/assets/styles';
+
+:host {
+  @include styles.flex-center;
+  margin-top: 100px;
+}
+.content-wrapper {
+  padding: 0;
+}
+[ngTabs] {
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+[ngTabList] {
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+[ngTab] {
+  flex: 1;
+  outline: none;
+  padding: 0.75rem 0;
+  cursor: pointer;
+  text-align: center;
+  font-size: clamp(18px, 14.571px + 1.071vw, 30px);
+  color: #89bcd9;
+}
+[ngTab][aria-selected='false']:focus {
+  outline-offset: -8px;
+  border-radius: 0.7rem;
+  color: #f8f5ec;
+}
+[ngTab]:hover {
+  color: #f8f5ec;
+}
+[ngTab][aria-selected='true'] {
+  color: #f8f5ec;
+  background: #2d383f;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+.sliding-window {
+  width: 200%;
+  display: flex;
+  transition: all 0.2s ease-in-out;
+  background: #2d383f;
+}
+[ngTabList]:has([ngTab]:nth-child(1)[aria-selected='true']) ~ .sliding-window {
+  transform: translateX(0%);
+}
+[ngTabList]:has([ngTab]:nth-child(2)[aria-selected='true']) ~ .sliding-window {
+  transform: translateX(-50%);
+}
+
+[ngTabPanel] {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  gap: 56px;
+  padding: 16px 120px 28px;
+}
+[ngTabPanel]:focus {
+  outline-offset: -4px;
+  border-radius: 0.5rem;
+}
+
+.box {
+  &__left {
+    @include styles.flex-center(column);
+    ul {
+      li {
+        list-style: none;
+        position: relative;
+        padding-left: 25px;
+        font-size: clamp(18px, calc(15.143px + 0.893vw), 28px);
+        font-weight: 400;
+        padding: 30px 10px 0px 40px;
+        .duration {
+          font-size: 18px;
+        }
+      }
+      p {
+        padding-top: 16px;
+        font-size: clamp(14px, calc(12.857px + 0.357vw), 18px);
+        font-weight: 400;
+      }
+
+      li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 32px;
+        width: 29px;
+        height: 26px;
+        background-image: url('../../../../../../public/assets/icons/Ellipse\ 8.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  &__right {
+    @include styles.flex-center(column);
+    gap: 12px;
+    .techIcons {
+      display: flex;
+      gap: 32px;
+    }
+    &--imgBox {
+      width: 450px;
+      height: 310px;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+      }
+    }
+    &--btn {
+      margin-top: 22px;
+      display: flex;
+      gap: 40px;
+    }
+  }
+}

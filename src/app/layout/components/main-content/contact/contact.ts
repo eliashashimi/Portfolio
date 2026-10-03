@@ -21,7 +21,7 @@ export class Contact {
   userform = this.fb.group({
     firstname: ['', [Validators.required, Validators.minLength(4)]],
     email: ['', [Validators.required, Validators.email]],
-    message: ['', Validators.required, Validators.minLength(20), Validators.maxLength(250)],
+    message: ['', Validators.required, Validators.maxLength(250)],
   });
 
   get firstname() {
