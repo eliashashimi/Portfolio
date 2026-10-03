@@ -1,7 +1,6 @@
 import { Component, signal, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Footer } from './shared/footer/footer';
-import { ViewportScroller } from '@angular/common';
 
 @Component({
   imports: [RouterOutlet, Footer],
@@ -11,4 +10,5 @@ import { ViewportScroller } from '@angular/common';
 })
 export class App {
   protected readonly title = signal('Portfolio');
+  protected readonly titles = signal('ngx-translate-demo-standalone');
 }
