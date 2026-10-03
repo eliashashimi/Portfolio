@@ -1,0 +1,87 @@
+<section class="content-wrapper">
+  <div class="contact">
+    <h2>{{ 'contact.head' | translate }}</h2>
+    <div class="contact__first-line">
+      <p>
+        {{ 'contact.text' | translate }}
+      </p>
+      <div class="contact__first-line--telMail">
+        <a href="mailto:elias.h.989@hotmail.com"
+          ><img src="assets/icons/icon_email.svg" alt="" />elias.h.989@hotmail.com</a
+        >
+        <a href="tel:+491728570571"
+          ><img src="assets/icons/icon_phone.svg" alt="" />+49 1728570571</a
+        >
+      </div>
+    </div>
+    <form [formGroup]="userform" (ngSubmit)="formSubmit()">
+      <div class="input">
+        <div class="input__content">
+          <div class="input__content--first">
+            @if (firstname?.valid) {
+              <h5 label for="name">{{ 'contact.yourName' | translate }}</h5>
+            } @else {
+              <h5 label for="name">{{ 'contact.error' | translate }}</h5>
+            }
+            <input
+              class="inpContact"
+              id="name"
+              type="text"
+              formControlName="firstname"
+              autocomplete="off"
+            />
+          </div>
+          <div class="input__content--second">
+            @if (email?.valid) {
+              <h5 label for="email">{{ 'contact.yourEmail' | translate }}</h5>
+            } @else {
+              <h5 label for="email">{{ 'contact.error' | translate }}</h5>
+            }
+            <input
+              class="inpContact"
+              id="email"
+              type="text"
+              formControlEmail="email"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+        <div class="input__content--third">
+          @if (message?.valid) {
+            <h5>{{ 'contact.yourMessage' | translate }}</h5>
+          } @else {
+            <h5>{{ 'contact.error' | translate }}</h5>
+          }
+          <input id="message" type="text" formControlMessage="message" autocomplete="off" />
+        </div>
+        <div class="accept">
+          <button class="accept--btn">
+            <img src="assets/icons/Check box.svg" alt="" />
+          </button>
+          <p>
+            {{ 'contact.accept' | translate }}
+            <span class="pri-pol">{{ 'contact.policy' | translate }}</span>
+            {{ 'contact.acceptAgree' | translate }}
+          </p>
+        </div>
+        <button class="send-btn" type="submit">{{ 'contact.send' | translate }}</button>
+      </div>
+    </form>
+  </div>
+  <a href="#hero"
+    ><button class="btn-arrow"><img src="assets/icons/btn_arrow_up.svg" alt="" /></button
+  ></a>
+</section>
+
+<p>{{ firstname?.valid }}</p>
+<p>{{ email?.valid }}</p>
+<p>{{ message?.valid }}</p>
+
+<!-- <p>{{ userform.valid }}</p> -->
+<!-- <h3>{{ firstname.touched }}</h3>
+<h3>{{ firstname.dirty }}</h3>
+<br />
+<h3>{{ email.touched }}</h3>
+<h3>{{ email.dirty }}</h3> -->
+<!-- <h3>{{ firstname.valid }}</h3>
+<h3>{{ firstname.value }}</h3> -->

@@ -1,0 +1,87 @@
+@use '../../../../../../public/assets/styles';
+
+.content-wrapper {
+  @include styles.flex-center;
+  margin-top: 100px;
+  margin-bottom: 80px;
+  padding-right: 120px;
+}
+
+a {
+  align-self: self-start;
+  margin-top: 15px;
+}
+
+.contact {
+  @include styles.flex-center(column);
+  padding: 0px 9% 0px 14%;
+  gap: 16px;
+  &__first-line {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 26px;
+    margin-left: 2px;
+    p {
+      width: 50%;
+    }
+    gap: 36px;
+    &--telMail {
+      @include styles.flex-center(column);
+      align-items: flex-start;
+      a {
+        @include styles.flex-center;
+        gap: 20px;
+      }
+    }
+  }
+}
+.input {
+  @include styles.flex-center(column);
+  gap: 20px;
+  &:invalid &__content {
+    @include styles.flex-center;
+    gap: 20px;
+    &--third {
+      width: 920px;
+      height: 164px;
+      input {
+        width: 100%;
+        height: 90%;
+        border: 1px solid #89bcd9;
+        border-radius: 30px;
+        background: #262e34;
+        &:active {
+          background: #f8f5ec1f;
+        }
+      }
+    }
+  }
+  .accept {
+    width: 100%;
+    @include styles.flex-center;
+    justify-content: flex-start;
+    gap: 5px;
+    button {
+      background: #262e34;
+      border-style: none;
+      padding: 0;
+    }
+    .pri-pol {
+      color: #89bcd9;
+    }
+  }
+}
+
+h5 {
+  padding: 0 0 2px 28px;
+  color: #89bcd9;
+}
+
+.send-btn {
+  background: #262e34;
+  border: 1px solid #f8f5ec;
+  display: flex;
+  align-self: end;
+  justify-self: end;
+}
