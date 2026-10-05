@@ -62,6 +62,9 @@ button {
   padding: 13px 30px;
   font-size: 18px;
   border-radius: 30px;
+  :hover {
+    cursor: pointer;
+  }
 }
 .btn-primary {
   color: #262e34;

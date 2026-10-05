@@ -1,4 +1,3 @@
-import { JsonPipe } from '@angular/common';
 import { Component, inject, signal } from '@angular/core';
 import {
   FormControl,
@@ -22,7 +21,7 @@ export function forbiddenNameValidator(nameRe: RegExp): ValidatorFn {
 }
 
 @Component({
-  imports: [ReactiveFormsModule, TranslatePipe, JsonPipe],
+  imports: [ReactiveFormsModule, TranslatePipe],
   selector: 'app-contact',
   styleUrl: './contact.scss',
   templateUrl: './contact.html',
@@ -49,15 +48,15 @@ export class Contact {
   get firstname() {
     return this.userform.get('firstname');
   }
-
   get email() {
     return this.userform.get('email');
   }
-
   get message() {
     return this.userform.get('message');
   }
-
+  get policy() {
+    return this.userform.get('policy');
+  }
   onSubmit() {
     this.formSubmitted.set(true);
 

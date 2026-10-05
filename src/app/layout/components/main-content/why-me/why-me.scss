@@ -24,5 +24,8 @@
     justify-self: flex-end;
     align-self: flex-end;
     margin-top: 24px;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
