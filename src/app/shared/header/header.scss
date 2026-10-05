@@ -35,12 +35,10 @@ figure {
     font-style: normal;
     font-weight: 400;
   }
-  p {
-    font-size: 14px;
-    font-family: 'Josefin Sans';
-    font-style: normal;
-    font-weight: 300;
-  }
+}
+p {
+  font-size: 14px;
+  color: #262e34;
 }
 
 .header-table {
@@ -83,4 +81,8 @@ figure {
       transition: all 0.4s ease-in-out;
     }
   }
+}
+
+.active p {
+  color: #f8f5ec;
 }

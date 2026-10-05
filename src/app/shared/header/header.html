@@ -25,10 +25,18 @@
         </tr>
       </table>
       <div class="btn-header">
-        <button (click)="switchLanguage('de')" class="btn-lang">
+        <button
+          (click)="switchLanguage('de')"
+          [class.active]="currentLang === 'de'"
+          class="btn-lang"
+        >
           <p>DE</p>
         </button>
-        <button (click)="switchLanguage('en')" class="btn-lang">
+        <button
+          (click)="switchLanguage('en')"
+          [class.active]="currentLang === 'en'"
+          class="btn-lang"
+        >
           <p>EN</p>
         </button>
       </div>

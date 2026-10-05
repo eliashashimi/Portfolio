@@ -8,8 +8,10 @@ import { TranslateService, TranslatePipe } from '@ngx-translate/core';
   templateUrl: './header.html',
 })
 export class Header {
+  currentLang: string = 'en';
   constructor(private translate: TranslateService) {}
   switchLanguage(lang: 'de' | 'en') {
+    this.currentLang = lang;
     this.translate.use(lang);
   }
 }
