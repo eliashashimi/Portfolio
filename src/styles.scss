@@ -105,17 +105,3 @@ button {
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
-
-.inpContact {
-  width: 450px;
-  height: 60px;
-  border: 1px solid #89bcd9;
-  border-radius: 30px;
-  background: #262e34;
-  :hover {
-    cursor: pointer;
-  }
-  :active {
-    background: #f8f5ec1f;
-  }
-}
