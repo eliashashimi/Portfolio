@@ -1,0 +1,100 @@
+<section class="content-wrapper" ngTabs>
+  <h2>{{ 'myProjects.name' | translate }}</h2>
+  <div ngTabList selectionMode="follow" selectedTab="el-pollo-loco">
+    <div ngTab value="el-pollo-loco">El Pollo Loco</div>
+    <div ngTab value="join">Join</div>
+  </div>
+  <div class="sliding-window">
+    <div ngTabPanel [preserveContent]="true" value="el-pollo-loco">
+      <ng-template ngTabContent>
+        <div class="box__left">
+          <ul>
+            <div class="box__left--firstLine">
+              <li>
+                {{ 'myPorjects.aboutHead' | translate }} &nbsp;
+                <span class="duration">{{ 'myProjects.dur' | translate }}</span>
+                <br />
+                <p>{{ 'myProjects.aboutText' | translate }}</p>
+              </li>
+            </div>
+            <li>
+              {{ 'myPorjects.orgaHead' | translate }} <br />
+              <p>
+                {{ 'myProjects.orgaText' | translate }}
+              </p>
+            </li>
+            <li>
+              {{ 'myProjects.learnedHead' | translate }}
+              <p>
+                {{ 'myProjects.learnedText' | translate }}
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="box__right">
+          <p>{{ 'myProjects.Technologies' | translate }}</p>
+          <div class="techIcons">
+            <img src="assets/images/Angular_Projects.png" alt="" />
+            <img src="assets/images/TS_Projects.png" alt="" />
+            <img src="assets/images/FireBase_Projects.png" alt="" />
+          </div>
+          <div class="box__right--imgBox">
+            <img src="assets/images/el_pollo_loco.png" alt="" />
+          </div>
+          <div class="box__right--btn">
+            <a href=""><button class="btn-primary">Live Test</button></a>
+            <a href="https://github.com/eliashashimi/EL-POLLO-LOCO"
+              ><button class="btn-secondary">Github</button></a
+            >
+          </div>
+        </div>
+      </ng-template>
+    </div>
+    <div ngTabPanel [preserveContent]="true" value="join">
+      <ng-template ngTabContent>
+        <div class="box__left">
+          <ul>
+            <div class="box__left--firstLine">
+              <li>
+                {{ 'myPorjects.aboutHead' | translate }} &nbsp;
+                <span class="duration">{{ 'myProjects.durJoin' | translate }}</span> <br />
+                <p>
+                  {{ 'myProjects.aboutText' | translate }}
+                </p>
+              </li>
+            </div>
+            <li>
+              {{ 'myPorjects.orgaHead' | translate }} <br />
+              <p>
+                {{ 'myProjects.orgaText' | translate }}
+              </p>
+            </li>
+            <li>
+              {{ 'myProjects.groupExpHead' | translate }}
+              <p>
+                {{ 'myProjects.groupExpText' | translate }}
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="box__right">
+          <p>{{ 'myProjects.Technologies' | translate }}</p>
+          <div class="techIcons">
+            <img src="assets/images/Html_Projects.png" alt="" />
+            <img src="assets/images/JS_Projects.png" alt="" />
+            <img src="assets/images/CSS_Projects.png" alt="" />
+          </div>
+          <div class="box__right--imgBox">
+            <img src="assets/images/comming-soon.png" alt="" />
+          </div>
+          <div class="box__right--btn">
+            <a href=""><button class="btn-primary">Live Test</button></a>
+            <a href="https://github.com/eliashashimi/EL-POLLO-LOCO"
+              ><button class="btn-secondary">Github</button></a
+            >
+          </div>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</section>

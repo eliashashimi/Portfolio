@@ -1,0 +1,31 @@
+@use '../../../../../../public/assets/styles';
+
+.why-me {
+  @include styles.flex-center(column);
+  padding: 100px 0px;
+}
+.content {
+  @include styles.flex-center;
+  align-items: flex-start;
+  gap: 52px;
+  padding: 0px 120px;
+  margin-bottom: 24px;
+
+  .location {
+    @include styles.flex-center;
+    gap: 8px;
+    p {
+      font-size: 30px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+  }
+  .talk-btn {
+    justify-self: flex-end;
+    align-self: flex-end;
+    margin-top: 24px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
