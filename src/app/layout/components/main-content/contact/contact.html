@@ -4,57 +4,148 @@
     <div class="contact__first-line">
       <p>{{ 'contact.text' | translate }}</p>
       <div class="contact__first-line--telMail">
-        <a href="mailto:elias.h.989@hotmail.com"
-          ><img src="assets/icons/icon_email.svg" alt="" />elias.h.989@hotmail.com</a
+        <a class="link" href="mailto:elias.h.989@hotmail.com"
+          ><img class="mail-hover" src="assets/icons/icon_email.svg" alt="" />E-mail:
+          elias.h.989@hotmail.com</a
         >
-        <a href="tel:+491728570571"
-          ><img src="assets/icons/icon_phone.svg" alt="" />+49 1728570571</a
+        <a class="link" href="tel:+491728570571"
+          ><img class="phone-hover" src="assets/icons/icon_phone.svg" alt="" />Tel: 01728570571</a
         >
       </div>
     </div>
-    <form [formGroup]="userform" (ngSubmit)="formSubmit()">
+    <form [formGroup]="userform" (ngSubmit)="onSubmit()">
       <div class="input">
         <div class="input__content">
-          <div class="input__content--first">
-            @if (firstname?.valid) {
-              <h5 label for="name">{{ 'contact.yourName' | translate }}</h5>
-            } @else {
-              <h5 label for="name">{{ 'contact.error' | translate }}</h5>
-            }
+          <div
+            class="input__content--first"
+            [class.has-error]="
+              (firstname?.invalid && firstname?.dirty) ||
+              (firstname?.hasError('required') && formSubmitted())
+            "
+            [class.has-success]="firstname?.valid && firstname?.dirty"
+          >
+            <div class="h5-txt">
+              <h5 label for="name">
+                @if (
+                  (firstname?.hasError('minlength') && firstname?.dirty) ||
+                  (firstname?.hasError('forbiddenName') && firstname?.dirty) ||
+                  (firstname?.hasError('required') && formSubmitted())
+                ) {
+                  @if (firstname?.hasError('required') && formSubmitted()) {
+                    {{ 'contact.error.nameRequired' | translate }}
+                  }
+                  @if (firstname?.hasError('minlength') && firstname?.dirty) {
+                    {{ 'contact.error.nameMin' | translate }}
+                  }
+                  @if (firstname?.hasError('forbiddenName') && firstname?.dirty) {
+                    {{ 'contact.error.nameSpace' | translate }}
+                  }
+                } @else {
+                  {{ 'contact.yourName' | translate }}
+                }
+                @if (firstname?.valid && firstname?.dirty) {
+                  <img
+                    class="checked"
+                    class="success-icon"
+                    src="assets/icons/check2.svg"
+                    alt="Valid"
+                  />
+                }
+              </h5>
+            </div>
             <input
-              class="inpContact"
+              class="inpContact inpTxt"
               id="name"
               type="text"
               formControlName="firstname"
               autocomplete="off"
             />
           </div>
-          <div class="input__content--second">
-            @if (email?.valid) {
-              <h5 label for="email">{{ 'contact.yourEmail' | translate }}</h5>
-            } @else {
-              <h5 label for="email">{{ 'contact.error' | translate }}</h5>
-            }
+          <div
+            class="input__content--second"
+            [class.has-error]="
+              (email?.invalid && email?.dirty) || (email?.hasError('required') && formSubmitted())
+            "
+            [class.has-success]="email?.valid && email?.dirty"
+          >
+            <div class="h5-txt">
+              <h5 label for="email">
+                @if (
+                  ((email?.hasError('pattern') || email?.hasError('email')) && email?.dirty) ||
+                  (email?.hasError('required') && formSubmitted())
+                ) {
+                  @if (email?.hasError('required') && formSubmitted()) {
+                    {{ 'contact.error.emailRequired' | translate }}
+                  }
+                  @if ((email?.hasError('pattern') || email?.hasError('email')) && email?.dirty) {
+                    {{ 'contact.error.emailInvalid' | translate }}
+                  }
+                } @else {
+                  {{ 'contact.yourEmail' | translate }}
+                }
+                @if (email?.valid && email?.dirty) {
+                  <img
+                    class="checked"
+                    class="success-icon"
+                    src="assets/icons/check2.svg"
+                    alt="Valid"
+                  />
+                }
+              </h5>
+            </div>
             <input
-              class="inpContact"
+              class="inpContact inpTxt"
               id="email"
               type="text"
-              formControlEmail="email"
+              formControlName="email"
               autocomplete="off"
             />
           </div>
         </div>
-        <div class="input__content--third">
-          @if (message?.valid) {
-            <h5>{{ 'contact.yourMessage' | translate }}</h5>
-          } @else {
-            <h5>{{ 'contact.error' | translate }}</h5>
-          }
-          <input id="message" type="text" formControlMessage="message" autocomplete="off" />
+        <div
+          class="input__content--third"
+          [class.has-error]="
+            (message?.invalid && message?.dirty) ||
+            (message?.hasError('required') && formSubmitted())
+          "
+          [class.has-success]="message?.valid && message?.dirty"
+        >
+          <div class="h5-txt">
+            <h5 label for="message">
+              @if (
+                (message?.hasError('maxLength') && message?.dirty) ||
+                (message?.hasError('required') && formSubmitted())
+              ) {
+                @if (message?.hasError('required') && formSubmitted()) {
+                  {{ 'contact.error.msgRequired' | translate }}
+                }
+                @if (message?.hasError('maxLength') && message?.dirty) {
+                  {{ 'contact.error.msgMax' | translate }}
+                }
+              } @else {
+                {{ 'contact.yourMessage' | translate }}
+              }
+              @if (message?.valid && message?.dirty) {
+                <img
+                  class="checked"
+                  class="success-icon"
+                  src="assets/icons/check2.svg"
+                  alt="Valid"
+                />
+              }
+            </h5>
+          </div>
+          <textarea
+            class="inpThird inpTxt"
+            id="message"
+            type="text"
+            formControlName="message"
+            autocomplete="off"
+          ></textarea>
         </div>
         <div class="accept">
           <button class="accept--btn">
-            <img src="assets/icons/Check box.svg" alt="" />
+            <img src="assets/icons/Check box.svg" alt="Check Box" />
           </button>
           <p>
             {{ 'contact.accept' | translate }}
@@ -62,15 +153,13 @@
             {{ 'contact.acceptAgree' | translate }}
           </p>
         </div>
-        <button class="send-btn" type="submit">{{ 'contact.send' | translate }}</button>
+        <button class="send-btn" type="submit" [disabled]="userform.invalid">
+          {{ 'contact.send' | translate }}
+        </button>
       </div>
     </form>
   </div>
-  <a href="#hero"
+  <a class="arrow-up" href="#hero"
     ><button class="btn-arrow"><img src="assets/icons/btn_arrow_up.svg" alt="" /></button
   ></a>
 </section>
-
-<p>{{ firstname?.valid }}</p>
-<p>{{ email?.valid }}</p>
-<p>{{ message?.valid }}</p>

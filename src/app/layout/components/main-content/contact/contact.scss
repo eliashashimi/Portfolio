@@ -9,7 +9,6 @@
 
 a {
   align-self: self-start;
-  margin-top: 15px;
 }
 
 .contact {
@@ -29,6 +28,7 @@ a {
     &--telMail {
       @include styles.flex-center(column);
       align-items: flex-start;
+      gap: 20px;
       a {
         @include styles.flex-center;
         gap: 20px;
@@ -36,6 +36,19 @@ a {
     }
   }
 }
+.link:hover {
+  color: #89bcd9;
+}
+
+.mail-hover:hover {
+  stroke: #89bcd9;
+}
+
+input:invalid {
+  color: red;
+  border: 1px solid red;
+}
+
 .input {
   @include styles.flex-center(column);
   gap: 20px;
@@ -45,22 +58,46 @@ a {
     &--third {
       width: 920px;
       height: 164px;
-      input {
-        width: 100%;
-        height: 90%;
-        border: 1px solid #89bcd9;
-        border-radius: 30px;
-        background: #262e34;
-        &:active {
-          background: #f8f5ec1f;
-        }
-        &:invalid {
-          color: red;
-          border: 1px solid red;
-        }
+      input.value {
+        color: white;
       }
     }
   }
+  .has-error {
+    h5 {
+      color: red;
+    }
+    .inpContact,
+    .inpThird {
+      border: 1px solid red;
+      color: red;
+    }
+  }
+
+  .inpContact {
+    width: 450px;
+    height: 60px;
+    border: 1px solid #89bcd9;
+    border-radius: 30px;
+    background: #262e34;
+    padding-left: 10px;
+  }
+
+  .inpThird {
+    display: flex;
+    padding-left: 15px;
+    padding-top: 10px;
+    width: 100%;
+    height: 90%;
+    border: 1px solid #89bcd9;
+    border-radius: 30px;
+    background: #262e34;
+  }
+
+  .inpTxt {
+    color: #f8f5ec;
+  }
+
   .accept {
     width: 100%;
     @include styles.flex-center;
@@ -78,14 +115,32 @@ a {
 }
 
 h5 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 30px;
   padding: 0 0 2px 28px;
   color: #89bcd9;
+  img {
+    background-color: #89bcd9;
+  }
+}
+
+.arrow-up {
+  padding-top: 15px;
 }
 
 .send-btn {
-  background: #262e34;
-  border: 1px solid #f8f5ec;
   display: flex;
   align-self: end;
   justify-self: end;
+  background: #262e34;
+  border: 1px solid #89bcd9;
+  color: #89bcd9;
+  cursor: pointer;
+  &:disabled {
+    background: #262e34;
+    border: 1px solid #f8f5ec;
+    color: #f8f5ec;
+  }
 }
